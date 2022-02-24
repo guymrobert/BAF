@@ -1,0 +1,20 @@
+<div class="header__action header__action--profile">
+  <a class="header__profile-btn before-account" href="javascript:void(0);" role="button" id="dropdownMenuProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <% if current_user.email.length <18  %>
+      <div><p> <i class="far fa-user-circle icon-font-profile"></i> <%= current_user.email %> </p></div>
+    <% else %>
+      <div><p> <i class="far fa-user-circle icon-font-profile"></i> <%= current_user.email[0,18] %> .. </p></div>
+    <% end %>
+  </a>
+
+  <ul class="dropdown-menu header__profile-menu after-login-commit" aria-labelledby="dropdownMenuProfile">
+    <li>
+      <a href="<%= logout_sessions_path %>" data-method="delete" rel="nofollow" class="">
+        <i class="fas fa-sign-out-alt"></i>
+        <span>Log Out</span>
+      </a>
+      <!-- <i class="fas fa-sign-out-alt"></i>
+      <%#= link_to ' Log Out',  destroy_user_session_path,method: :delete, class:""  %> -->
+    </li>
+  </ul>
+</div>

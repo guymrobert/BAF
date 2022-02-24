@@ -1,0 +1,4 @@
+tokenURIPrefix: 'https://gateway.pinata.cloud/ipfs/'
+transferProxyContractAddress: 'TRANSFER_PROXY_CONTRACT_ADDRESS_HERE'
+wethAddress: 'WETH_CONTRACT_ADDRESS_HERE'
+tradeContractAddress: 'TRADE_CONTRACT_ADDRESS_HERE'

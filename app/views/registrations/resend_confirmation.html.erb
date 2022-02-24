@@ -1,0 +1,34 @@
+<section class="edit-users mb-50">
+  <div class="container-fluid">
+    <div class="row row--grid">
+      <div class="col-xl-4 col-lg-2 col-md-2"></div>
+      <div class="col-xl-4 col-lg-8 col-md-8">
+
+        <div class="edit_profile">
+          <div class="row row--grid decentralised-sector">
+            <div class="col-12 col-lg-12">
+              <div class="edit-profile-heading" id="decentralised-register">
+
+                <h3>Resend Confirmation Email</h3>
+                <%= form_with(url: resend_registrations_path) do |f| %>
+
+                  <div class="field sign__group">
+                    <%= f.label :email, class: 'sign__label' %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", required: true, class: 'sign__input' %>
+                  </div>
+
+                  <div class="actions two-btns parent-margin-zero">
+                    <%= f.submit "Resend Email", class: 'sign__btn here-sign-in' %>
+                  </div>
+                <% end %>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,52 @@
+<section class="edit-users mb-50">
+  <div class="container-fluid">
+    <div class="row row--grid">
+      <div class="col-xl-4 col-lg-2 col-md-2"></div>
+      <div class="col-xl-4 col-lg-8 col-md-8">
+
+        <div class="edit_profile">
+          <div class="row row--grid decentralised-sector">
+            <div class="col-12 col-lg-12">
+              <div class="edit-profile-heading" id="decentralised-register">
+
+                <h3>Log in</h3>
+                <%= form_for(User.new, url: email_session_sessions_path) do |f| %>
+                  <div class="field sign__group">
+                    <%= f.label :email, class: 'sign__label' %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'sign__input' %>
+                  </div>
+
+                  <div class="field sign__group">
+                    <%= f.label :password, class: 'sign__label' %><br />
+                    <%= f.password_field :password, autocomplete: "current-password", class: 'sign__input' %>
+                  </div>
+
+                  <div class="actions">
+                    <%= f.submit "Log in", class: 'sign__btn here-sign-in' %>
+                    
+                  </div>
+                  <div class="row extra-link-register">
+                    <div class="col-md-12">
+                      <p class="mb-5"><span>If you don't have account, please </span><%= link_to "Signup", new_registration_path %></p>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="confirmer">
+                        <%= link_to "Resend Confirmation Email", resend_confirmation_registrations_path %>
+                        <%= link_to "Forgot Password?", "https://exchange.viwallet.com/en/passwordForgotten" %>
+                      </div>
+                      
+                    </div>
+                  </div>
+                <% end %>
+
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
